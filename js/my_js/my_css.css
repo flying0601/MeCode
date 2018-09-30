@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/*清除浮动*/
+.clearfix { *zoom: 1; }
+.clearfix:before,
+.clearfix:after { display: table; content: ""; line-height: 0; }
+.clearfix:after { clear: both; }
+
+/*多次点击不出现高亮现象*/
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+
+/*输入宽和文本域的兼容-->多在火狐*/
+input:required:invalid, input:focus:invalid, textarea:required:invalid, textarea:focus:invalid {
+    box-shadow: none;
+    -moz-box-shadow: none;
+}
