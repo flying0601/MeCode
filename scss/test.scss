@@ -1,0 +1,13 @@
+@import "_variable";
+@import "_reset";
+
+.new-list{
+  @include VHcenter();//
+  .new-list__item{
+    @include hLh(20px);
+    @include gradientUpToBottom(#689e39, #377435);
+    .new-list__item_current{
+      @include ellipsisNum(2);
+    }
+  }
+}

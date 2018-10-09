@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex布局</title>
+  <style>
+    /*父级
+      1.flex-direction
+          row 表示从左到右定向的水平轴，而 row-reverse 表示从右到左;
+          column主轴起点与主轴终点和书写模式的前后点相同,column-reverse置换了主轴起点和主轴终点(垂直排列)
+      2.flex-wrap是否换行
+          nowrap不换行，wrap换行
+          wrap-reverse置换
+      3.justify-content主要用设置flex items在容器里面严着主轴的排列方式
+        flex-start、flex-end 、centent 、space-between、space-around
+      4.align-items
+        flex-start、flex-end 、centent、baseline、stretch、space-between、space-around
+    */
+    /* 子元素
+      1.order用于改变容器中项目的默认的排列顺序。
+        .flex-item{
+          order: <integer>;
+        }
+      2.flex-grow属性值决定它相对与其他兄弟视图自动填充flex-container剩余空间的比例
+        .flex-item{
+          flex-grow: <number>;
+        }
+      3.flex-shrink属性和flex-grow相反
+        .flex-item{
+          flex-shrink: <number>;
+        }
+      4.flex-basis制定某一个item在主轴上的大小，或者在主轴上相对于flex-container大小的比例关系。
+        .flex-item{
+          flex-basis:auto | <width>;
+        }
+      5.flex是flex-grow, flex-shrink andflex-basis的缩写，auto等价于1 1 auto,none等价于0 0 auto.
+        .flex-item {
+            flex: none | auto | [ <flex-grow> <flex-shrink>? || <flex-basis> ];
+              }
+      6.align-self主要用在当因为flex-container上的属性align-items属性改变了自己的状态但是又希望自己的状态和其它兄弟视图之间的状态不一样时，就可以使用align-self来的自身的状态进行设置。
+        .flex-item {
+        align-self: auto | flex-start | flex-end | center | baseline | stretch;
+        }
+     */
+    html,body{margin: 0;}
+    .flex-container {
+      background-color: #FECE3F;
+      width: 100%;
+      min-height: 220px;
+      display: flex;
+      /* justify-content: center;水平居中、align-items: center; 垂直居中 */
+      /* align-items: center; */
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .flex-item {
+      width: 120px;
+      height: 120px;
+      background-color: #fff;
+      margin: 20px;
+      color:#FECE3F;
+      font-size: 94px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+
+  </style>
+
+<body>
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+    <div class="flex-item">6</div>
+    <div class="flex-item">7</div>
+    <div class="flex-item">8</div>
+  </div>
+</body>
+
+</html>
